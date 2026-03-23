@@ -31,8 +31,14 @@ public class SelenideGitHub {
         $("#wiki-tab").click();
         $$("a").findBy(exactText("Soft assertions")).click();
         $$("h4").findBy(text("3. Using JUnit5 extend test class:")).shouldBe(visible);
+    }
 
-
+    @Test
+    void testHoverGitHub() {
+        open("");
+        $$("button").findBy(exactText("Solutions")).hover();
+        $$("span").findBy(exactText("Enterprises")).click();
+        $$("h1").findBy(exactText("The AI-powered developer platform for the agent-ready enterprise")).shouldBe(visible);
 
     }
 }
